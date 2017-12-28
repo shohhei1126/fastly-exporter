@@ -1,4 +1,4 @@
-LDFLAGS = "-X main.version=0.0.1"
+LDFLAGS = "-X main.version=0.0.3"
 
 setup:
 	go get -u github.com/golang/dep/cmd/dep
@@ -10,8 +10,9 @@ lint:
 		--skip vendor \
 		./...
 
+.PHONY: build
 build:
-	GOOS=linux GOARCH=arm go build -ldflags $(LDFLAGS) -o build/fastly-exporter
+	GOOS=linux GOARCH=amd64 go build -ldflags $(LDFLAGS) -o build/fastly-exporter
 
 clean:
 	rm -fr build
