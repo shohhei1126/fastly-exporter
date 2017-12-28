@@ -11,7 +11,7 @@ lint:
 		./...
 
 build:
-	go build -ldflags $(LDFLAGS) -o build/fastly-exporter
+	GOOS=linux GOARCH=arm go build -ldflags $(LDFLAGS) -o build/fastly-exporter
 
 clean:
 	rm -fr build
