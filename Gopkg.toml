@@ -1,0 +1,7 @@
+[[constraint]]
+  name = "github.com/prometheus/client_golang"
+  version = "0.8.0"
+
+[[constraint]]
+  name = "github.com/sethvargo/go-fastly"
+  version = "0.4.2"
